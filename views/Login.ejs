@@ -1,0 +1,37 @@
+<%- include ("includes/header", {
+   "title": "Login"
+}) %>
+
+<div  class="container glass logreg" style="margin-top: 100px; max-width: 500px; border-radius: 25px; height: 70vh;">
+    <%- include ("includes/ResponseAlert", {
+        "request": request
+    }) %>
+
+    <div class="row">
+        <div class="col-md-12 header" style="background-color: #50d8d7;
+        background-image: linear-gradient(180deg, #489292 0%, #bd56be 74%); color: white;">
+            <h1>HELLO & WELCOME</h1>
+            <p>Unlock a world of possibilites by logging into your account.</p>
+        </div>
+        <div class="col-md-12 inputs">
+            <form action="/Login" method="POST">
+                <div class="form-group">
+                    <label style="color: aliceblue;">Email</label>
+                    <input type="email" placeholder="Enter email" name="email" style="background-color: transparent; color: white;" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label style="color: aliceblue;">Password</label>
+                    <input type="password" placeholder="Enter password" name="password" style="background-color: transparent; color: white;" class="form-control" required />
+                </div>
+
+                <label for="check" style="color: aliceblue;"><input type="checkbox" name="check" required> By logging in, you agree to our <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a>.</label>
+                <input type="submit" value="Login" class="login_btn" style="background-color: aliceblue; border-radius: 10px; padding: 4px 40px 4px 40px;
+                margin: 70px 120px;" />
+                <!-- <input type="submit" value="Login" class="btn btn-primary" /> -->
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ("includes/footer") %>

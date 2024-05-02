@@ -1,0 +1,39 @@
+<%- include ("includes/header", {
+   "title": "Register"
+}) %>
+
+<div class="container glass logreg" style="margin-top: 100px; max-width: 500px; border-radius: 25px; height: 75vh;">
+    <%- include ("includes/ResponseAlert", {
+        "request": request
+    }) %>
+
+    <div class="row">
+        <div class="col-md-12 header" style="background-color: #50d8d7;
+        height: 230px;
+        background-image: linear-gradient(180deg, #489292 0%, #bd56be 74%); color: white;">
+        <h1>Join SkyVault Today!</h1>
+        <p>Unlock a world of possibilities by creating your free account with SkyVault. Get ready to revolutionize the way you share and collaborate on files</p>
+        </div>
+        <div class="col-md-12 inputs">
+            <form action="/Register" method="POST">
+                <div class="form-group">
+                    <label style="color: aliceblue;">Name</label>
+                    <input type="text" placeholder="Enter name" name="name" style="background-color: transparent; color: white;" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label style="color: aliceblue;">Email</label>
+                    <input type="email" placeholder="Enter email" name="email" style="background-color: transparent; color: white;" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label style="color: aliceblue;">Password</label>
+                    <input type="password" placeholder="Enter password" name="password" style="background-color: transparent; color: white;" class="form-control" required />
+                </div>
+                <input type="submit" value="Register" class="login_btn" style="background-color: aliceblue; border-radius: 10px; padding: 4px 40px 4px 40px; margin: 70px 120px;" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ("includes/footer") %>
